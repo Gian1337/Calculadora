@@ -27,6 +27,12 @@ def calculadora(nro1, nro2, operacion):
     elif operacion == "/":
         rdo = defBasics.division(nro1,nro2) #Llama a la función división y se almacena en variable resultado
         print(f"El resultado de la división es: {rdo}") 
+    elif operacion == "^":
+        rdo = defBasics.potencia(nro1, nro2) #Llama a la función potencia
+        print(f"El resultado de la potencia es: {rdo}")
+    elif operacion == "**":
+        rdo = defBasics.raiz(nro1,nro2) #Llama a la función raíz
+        print(f"El resultado de la raíz es: {rdo}")
     else:
         print("Error!!!")
         rdo = None
@@ -58,9 +64,10 @@ def get_inputs():
                     print("Input inválido. Debe ingresar un número!!!")
             
             #Validación para que el usuario ingrese el carácter correcto de operación
-            operacion= input("Ingrese una operación (+, -, *, /): ")
-            if operacion not in ['+','-', '*', '/']:
-                raise ValueError("Operador inválido. Sólo puede ingresar + , - , * , /")
+            operacion= input("Ingrese una operación (+, -, *, /, ^, ** (raiz)): ")
+            
+            if operacion not in ['+','-', '*', '/', '^', '**']:
+                raise ValueError("Operador inválido. Sólo puede ingresar + , - , * , / , ^ , **")
             
             return var1, var2, operacion
         except ValueError as error:

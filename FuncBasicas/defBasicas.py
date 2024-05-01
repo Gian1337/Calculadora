@@ -30,3 +30,16 @@ Función que toma dos párametros y retorna la multiplicación de ellos
 def multiplicacion(a,b):
     return a * b
 
+
+'''
+Función que toma dos parámetros (a = base y b = exponente) y luego  devuelve el cálculo de la potencia.
+'''
+def potencia(a,b):
+    return a ** b
+
+'''
+Función que toma dos parámetros (a = numero y b = raiz) y luego devuelve el cálculo de la raíz.
+'''
+
+def raiz(a, b):
+    return a ** (1/b)
